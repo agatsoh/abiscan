@@ -35,7 +35,7 @@ class AbiScanner:
         url = self.get_api_url(contract_address)
         r = requests.get(url)
         obj = r.json()
-        if (obj["message"] == "OK"):
+        if obj["message"] == "OK":
             return obj.get("result", "")
         else:
             return ""
